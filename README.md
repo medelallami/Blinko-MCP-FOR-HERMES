@@ -1,7 +1,6 @@
 # Blinko MCP Server Documentation (Enterprise Edition)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 [![MCP Protocol](https://img.shields.io/badge/MCP-v2024--11--05-orange.svg)](https://modelcontextprotocol.io)
 
 Welcome to the enterprise-grade **Blinko Model Context Protocol (MCP) Server** documentation repository. This project provides secure, scalable integration patterns, code examples, and deployment best practices for connecting AI agents—such as the Hermes Agent—to your Blinko infrastructure.
@@ -13,7 +12,6 @@ Welcome to the enterprise-grade **Blinko Model Context Protocol (MCP) Server** d
 - [Available Tools](#available-tools)
 - [Enterprise Documentation & Guides](#enterprise-documentation--guides)
 - [Code Examples](#code-examples)
-- [Contributing & Support](#contributing--support)
 
 ---
 
@@ -60,14 +58,6 @@ To accelerate developer onboarding, we supply production-ready code examples:
 
 - **[Python (httpx + asyncio)](./examples/python_example.py)**: A robust asynchronous connection pattern.
 - **[cURL (Raw HTTP)](./examples/curl_example.sh)**: Low-level reference architecture for shell automation.
-
-## 🤝 Contributing & Support
-
-We hold our engineering standards high. If you would like to contribute:
-- Please read our [Contributing Guidelines](./CONTRIBUTING.md).
-- Adhere strictly to the [Code of Conduct](./CODE_OF_CONDUCT.md).
-
-For bug reports or feature requests, please utilize the templates provided in the [Issues tab](../../issues).
 
 ---
 
