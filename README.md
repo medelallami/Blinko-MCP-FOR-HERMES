@@ -1,60 +1,74 @@
-# Blinko MCP Server Documentation
+# Blinko MCP Server Documentation (Enterprise Edition)
 
-Welcome to the Blinko Model Context Protocol (MCP) Server documentation repository! This repository contains documentation, examples, and best practices for connecting to and interacting with the Blinko MCP server, especially via the Hermes Agent.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+[![MCP Protocol](https://img.shields.io/badge/MCP-v2024--11--05-orange.svg)](https://modelcontextprotocol.io)
 
-## Table of Contents
+Welcome to the enterprise-grade **Blinko Model Context Protocol (MCP) Server** documentation repository. This project provides secure, scalable integration patterns, code examples, and deployment best practices for connecting AI agents—such as the Hermes Agent—to your Blinko infrastructure.
+
+## 📑 Table of Contents
 
 - [Overview](#overview)
-- [Server Information](#server-information)
+- [Architecture & Server Information](#architecture--server-information)
 - [Available Tools](#available-tools)
-- [Documentation & Guides](#documentation--guides)
+- [Enterprise Documentation & Guides](#enterprise-documentation--guides)
 - [Code Examples](#code-examples)
+- [Contributing & Support](#contributing--support)
 
 ---
 
-## Overview
+## 🚀 Overview
 
-The Blinko MCP server enables AI agents (like Hermes) to seamlessly interact with your Blinko instance. It provides tools for creating, updating, and searching notes, managing scheduled tasks, and interacting with the web.
+The Blinko MCP server creates a secure, standardized bridge between advanced AI agents and your internal Blinko instance. It provides fine-grained tools for comprehensive workspace management, including creating, updating, and searching notes, managing automated scheduled tasks, and executing web content analysis.
 
-## Server Information
+## 🏗️ Architecture & Server Information
 
-- **URL**: `http://<YOUR_SERVER_IP>:<PORT>/mcp`
-- **Protocol**: MCP (Model Context Protocol) v2024-11-05
-- **Transport**: HTTP with JSON payloads
-- **Authentication**: Bearer token via Authorization header
+- **URL Endpoint**: `http://<YOUR_SERVER_IP>:<PORT>/mcp`
+- **Protocol**: MCP (Model Context Protocol) `v2024-11-05`
+- **Transport**: Standardized HTTP bridging with JSON-RPC 2.0 payloads
+- **Authentication**: Enterprise Bearer token validation via `Authorization` headers
+- **Session Management**: Native tracking via `Mcp-Session-Id` headers
 
-## Available Tools
+## 🛠️ Available Tools
 
-The Blinko MCP server provides the following capabilities:
+The Blinko MCP server empowers agents with the following suite of tools:
 
-1. **`searchBlinko`**: Search for notes using filters or AI queries.
-2. **`upsertBlinko`**: Create new content (notes, documents, articles).
-3. **`updateBlinko`**: Update existing content or change its status (e.g., archive, pin).
-4. **`deleteBlinko`**: Move content to the recycle bin.
-5. **`createComment`**: Add comments to notes.
-6. **`webSearch`**: Web search assistant.
-7. **`webExtra`**: Web scraping and content analysis via Jina API.
-8. **`createScheduledTask`**: Create automated, scheduled tasks using cron syntax.
-9. **`deleteScheduledTask`**: Remove scheduled tasks.
-10. **`listScheduledTasks`**: List your active scheduled tasks.
+1. **`searchBlinko`**: Search for notes using filters or AI-enhanced semantic queries.
+2. **`upsertBlinko`**: Provision new content entities (notes, documents, articles).
+3. **`updateBlinko`**: Mutate existing content or transition state (e.g., archive, pin).
+4. **`deleteBlinko`**: Soft-delete content to the recycle bin.
+5. **`createComment`**: Append nested comments to active notes.
+6. **`webSearch`**: Trigger agentic web searches.
+7. **`webExtra`**: Execute web scraping and unstructured content analysis via Jina API.
+8. **`createScheduledTask`**: Provision CRON-based automated agents tasks.
+9. **`deleteScheduledTask`**: Teardown scheduled automation tasks.
+10. **`listScheduledTasks`**: Audit active scheduled operations.
 
-For detailed input properties of each tool, refer to our [API Reference](./docs/examples.md).
+For a comprehensive data dictionary and input schema reference, see our [Examples Guide](./docs/examples.md).
 
-## Documentation & Guides
+## 📚 Enterprise Documentation & Guides
 
-To help you get started securely and configure your clients, check out our guides:
+Security and scalability are at the core of this repository. Please review the following technical guides before deploying your integration:
 
-- 🛡️ **[Secure Credential Storage](./docs/secure_credentials.md)**: Best practices for handling and storing your Bearer tokens.
-- ⚙️ **[Hermes Configuration](./docs/hermes_configuration.md)**: How to configure the Hermes Agent to connect to Blinko MCP.
+- 🛡️ **[Secure Credential Storage](./docs/secure_credentials.md)**: Enterprise best practices for Vault/Secrets-manager token injection and avoiding leakage.
+- ⚙️ **[Hermes Configuration](./docs/hermes_configuration.md)**: Guidelines for configuring the Hermes Agent safely within corporate deployments.
+- 🔒 **[Security Policy](./SECURITY.md)**: Vulnerability disclosure policies.
 
-## Code Examples
+## 💻 Code Examples
 
-We provide code examples to help you build custom integrations with the Blinko MCP Server:
+To accelerate developer onboarding, we supply production-ready code examples:
 
-- **[Python Example](./examples/python_example.py)**: A complete script using `httpx` and `asyncio` to connect and create a note.
-- **[cURL Example](./examples/curl_example.sh)**: A shell script demonstrating raw HTTP requests to the MCP server.
-- **[Example Usage Guide](./docs/examples.md)**: A walkthrough of the initialization and tool calling process.
+- **[Python (httpx + asyncio)](./examples/python_example.py)**: A robust asynchronous connection pattern.
+- **[cURL (Raw HTTP)](./examples/curl_example.sh)**: Low-level reference architecture for shell automation.
+
+## 🤝 Contributing & Support
+
+We hold our engineering standards high. If you would like to contribute:
+- Please read our [Contributing Guidelines](./CONTRIBUTING.md).
+- Adhere strictly to the [Code of Conduct](./CODE_OF_CONDUCT.md).
+
+For bug reports or feature requests, please utilize the templates provided in the [Issues tab](../../issues).
 
 ---
 
-*For use with Hermes Agent MCP client and other MCP-compatible clients.*
+*Engineered for scale. Powered by the Model Context Protocol.*
