@@ -1,0 +1,6 @@
+.env
+__pycache__/
+*.pyc
+.hermes/
+.DS_Store
+node_modules/
